@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { CrewBio } from "@/hooks/useCrewBio";
+import _ from "lodash";
 
 interface CrewHeaderProps {
   bio: CrewBio;
@@ -20,7 +21,9 @@ const CrewHeader: React.FC<CrewHeaderProps> = ({ bio, chips }) => {
           className="rounded-lg shadow-lg mx-auto"
         />
         <h1 className="text-3xl font-bold mt-4 text-center">{bio.name}</h1>
-        <h2 className="text-xl text-gray-600 text-center">{bio.role}</h2>
+        <h2 className="text-xl text-gray-600 text-center">
+          {_.startCase(bio.role)}
+        </h2>
       </div>
       {/* Right Column: Chips Section */}
       <div className="w-full lg:w-1/3 mt-6 lg:mt-0">
