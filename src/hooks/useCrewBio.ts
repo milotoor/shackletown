@@ -1,20 +1,50 @@
 import useYaml from "./useYaml";
 
+export type InternalName =
+  | "ernest_shackleton"
+  | "frank_wild"
+  | "frank_worsley"
+  | "lionel_greenstreet"
+  | "tom_crean"
+  | "alfred_cheetham"
+  | "hubert_hudson"
+  | "lewis_rickinson"
+  | "alexander_kerr"
+  | "alexander_macklin"
+  | "james_mcilroy"
+  | "james_wordie"
+  | "leonard_hussey"
+  | "reginald_james"
+  | "robert_clark"
+  | "frank_hurley"
+  | "george_marston"
+  | "thomas_orde_lees"
+  | "harry_mcnish"
+  | "charles_green"
+  | "walter_how"
+  | "william_bakewell"
+  | "timothy_mccarthy"
+  | "thomas_mcleod"
+  | "john_vincent"
+  | "ernest_holness"
+  | "william_stephenson"
+  | "perce_blackborow";
+
 export interface CrewBio {
   name: string;
   role: string;
-  internalName: string;
+  internalName: InternalName;
   fullName?: string;
 }
 
-interface CrewBioYml {
+export interface CrewBioYml {
   name: string;
   role: string;
   internal_name: string;
   full_name?: string;
 }
 
-const useCrewBio = (internalName: string): CrewBio => {
+const useCrewBio = (internalName: InternalName): CrewBio => {
   try {
     const data = useYaml<CrewBioYml>([
       "public",

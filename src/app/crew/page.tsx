@@ -1,8 +1,10 @@
+import CrewLink from "@/components/CrewLink";
+import { InternalName } from "@/hooks/useCrewBio";
 import useYaml from "@/hooks/useYaml";
 
 interface CrewMember {
   name: string;
-  internal_name: string;
+  internal_name: InternalName;
   full_name?: string;
   role: string;
 }
@@ -21,13 +23,7 @@ export default function CrewList() {
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3">
         {manifest.crew.map((member) => (
           <li key={member.internal_name}>
-            <a
-              href={`/crew/${member.internal_name}`}
-              className="text-blue-500 hover:text-blue-700 underline"
-            >
-              {/* Use full_name if available, otherwise default to the regular name */}
-              {member.full_name ?? member.name}
-            </a>
+            <CrewLink name={member.internal_name} fullName />
           </li>
         ))}
       </ul>

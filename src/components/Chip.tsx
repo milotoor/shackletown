@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ChipProps {
-  title: string;
+  title: React.ReactNode;
   /**
    * A Tailwind CSS color value in the format "color-shade", e.g., "green-500".
    * Defaults to "gray-200" if not provided.
