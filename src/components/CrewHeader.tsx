@@ -4,7 +4,7 @@ import { CrewBio } from "@/hooks/useCrewBio";
 
 interface CrewHeaderProps {
   bio: CrewBio;
-  chips: React.ReactNode;
+  chips?: React.ReactNode;
 }
 
 const CrewHeader: React.FC<CrewHeaderProps> = ({ bio, chips }) => {
