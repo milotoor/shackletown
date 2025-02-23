@@ -26,7 +26,7 @@ const CrewHeader: React.FC<CrewHeaderProps> = ({ bio, chips }) => {
         </h2>
       </div>
       {/* Right Column: Chips Section */}
-      <div className="w-full lg:w-1/3 mt-6 lg:mt-0">
+      <div className="w-full flex-1 lg:w-1/3 mt-6 lg:mt-0">
         <section>
           <div className="flex flex-wrap gap-2 mt-2">{chips}</div>
         </section>

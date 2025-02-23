@@ -1,6 +1,7 @@
 import CrewMemberPage from "@/components/CrewMemberPage";
 import CrewHeader from "@/components/CrewHeader";
 import useCrewBio from "@/hooks/useCrewBio";
+import Quote from "@/components/Quote";
 
 export const metadata = {
   title: "Frank Wild - Second-in-command",
@@ -12,6 +13,9 @@ const FrankWildPage = () => {
   return (
     <CrewMemberPage>
       <CrewHeader bio={bio} />
+      <section className="mt-6">
+        <Quote text="She's going, boys. I think it's time to get off." />
+      </section>
     </CrewMemberPage>
   );
 };
