@@ -1,10 +1,19 @@
+import CrewMemberPage from "@/components/CrewMemberPage";
+import CrewHeader from "@/components/CrewHeader";
+import useCrewBio from "@/hooks/useCrewBio";
+
 export const metadata = {
-  title: "Perce Blackborow - Steward",
-  description: "Page for Perce Blackborow, the steward.",
+  title: "Perce Blackborow - Stowaway",
+  description: "Page for Perce Blackborow, the stowaway.",
 };
 
 const PerceBlackborowPage = () => {
-  return <h1>Perce Blackborow</h1>;
+  const bio = useCrewBio("perce_blackborow");
+  return (
+    <CrewMemberPage>
+      <CrewHeader bio={bio} />
+    </CrewMemberPage>
+  );
 };
 
 export default PerceBlackborowPage;

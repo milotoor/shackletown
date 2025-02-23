@@ -13,7 +13,7 @@ const CrewHeader: React.FC<CrewHeaderProps> = ({ bio, chips }) => {
       {/* Left Column: Image, Name, Role */}
       <div>
         <Image
-          src={`/crew/${bio.internalName}/img/01.jpg`}
+          src={`/crew/${bio.internalName}/img/01.webp`}
           alt={bio.name}
           width={300}
           height={400}

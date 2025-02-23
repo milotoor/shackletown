@@ -11,7 +11,6 @@ export const metadata = {
 
 const ErnestShackletonPage = () => {
   const bio = useCrewBio("ernest_shackleton");
-  console.log(bio);
   return (
     <CrewMemberPage>
       <CrewHeader
