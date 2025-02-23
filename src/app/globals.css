@@ -5,12 +5,20 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --quote-drop-shadow: 3px 5px 8px rgba(0, 255, 255, 0.75);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+
+/* On larger screens, update the drop shadow value using Tailwind's breakpoints */
+@screen lg {
+  :root {
+    --quote-drop-shadow: 15px 8px 12px rgba(0, 255, 255, 0.75);
   }
 }
 

@@ -1,4 +1,5 @@
 import Chip from "@/components/Chip";
+import Quote from "@/components/Quote";
 import Image from "next/image";
 
 export const metadata = {
@@ -39,10 +40,11 @@ const ErnestShackletonPage = () => {
       </div>
       {/* Biographical Details rendered below */}
       <section className="mt-6">
-        <h3 className="text-2xl font-semibold">Biographical Details</h3>
-        <div className="mt-2">
-          {/* More biographical details will be added here */}
-        </div>
+        <Quote
+          text={
+            'There once was a mouse who lived in a tavern. One night the mouse found a leaky barrel of beer, and he drank all he could hold. When the mouse had finished, he sat up, twirled his whiskers, and looked arround arrogantly. "Now then," he said, "where\'s that damned cat?"'
+          }
+        />
       </section>
     </div>
   );
