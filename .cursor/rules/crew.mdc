@@ -1,0 +1,8 @@
+---
+description: Info about the crew
+globs: 
+---
+- When referring to members of the crew, the following terms are relevant:
+  - "Full name" or "legal name": their full, legal name without any nicknames
+  - "Name": what they were known as to one another, which may include nicknames like "Frank" or "Chippy"
+  - "Internal name": how they are identified within the codebase, e.g. `alexander_kerr`

@@ -1,0 +1,6 @@
+---
+description: Page design
+globs: *.tsx
+---
+- Use Tailwind CSS to structure the document and apply styling
+- Use a mobile-first design approach so that the pages render nicely for small screens. They should also render nicely on larger screens with more lateral spacing
