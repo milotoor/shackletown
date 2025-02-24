@@ -18,7 +18,7 @@ export default function CrewList() {
   ]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div className="flex flex-col items-center justify-center min-h-screen my-4 md:my-0">
       <h1 className="text-3xl font-bold mb-6">Crew Members</h1>
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3">
         {manifest.crew.map((member) => (

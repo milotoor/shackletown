@@ -28,7 +28,7 @@ interface QuoteCarouselProps {
   slideAnimationDuration?: number;
   /**
    * The interval between quotes in milliseconds.
-   * @default 10000
+   * @default 15000
    */
   interval?: number;
 }
@@ -43,7 +43,7 @@ interface QuoteCarouselProps {
 export default function QuoteCarousel({
   quotes,
   slideAnimationDuration = 1000,
-  interval = 10000,
+  interval = 15000,
 }: QuoteCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
