@@ -6,8 +6,16 @@ import useCrewBio from "@/hooks/useCrewBio";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ernest Shackleton - Expedition Leader",
-  description: "Commander of the most successful failure of all time.",
+  openGraph: {
+    title: "Ernest Shackleton - Expedition Leader",
+    description: "Commander of the most successful failure of all time.",
+    images: [
+      {
+        url: "/crew/ernest_shackleton/img/01.jpg",
+        alt: "Ernest Shackleton",
+      },
+    ],
+  },
 };
 
 const quotes: QuoteProps[] = [
