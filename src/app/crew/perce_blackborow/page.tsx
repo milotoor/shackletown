@@ -18,7 +18,7 @@ const PerceBlackborowPage = () => {
         bio={bio}
         chips={
           <>
-            <Chip title="Threatened with cannibalism" color="red-800" />
+            <Chip title="Threatened with cannibalism" color="bg-red-800" />
             <Chip
               title={
                 <span>

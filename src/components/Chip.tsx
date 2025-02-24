@@ -4,9 +4,11 @@ interface ChipProps {
   title: React.ReactNode;
   /**
    * A Tailwind CSS color value in the format "color-shade", e.g., "green-500".
-   * Defaults to "gray-200" if not provided.
+   * Defaults to "bg-gray-200" if not provided.
    */
   color?: string;
+  iconColor?: string;
+  icon?: string;
 }
 
 /**
@@ -16,8 +18,8 @@ interface ChipProps {
  */
 const getTextColor = (color: string): string => {
   const parts = color.split("-");
-  if (parts.length === 2) {
-    const shade = parseInt(parts[1], 10);
+  if (parts.length === 3) {
+    const shade = parseInt(parts[2], 10);
     if (!isNaN(shade)) {
       return shade >= 500 ? "text-white" : "text-black";
     }
@@ -25,16 +27,27 @@ const getTextColor = (color: string): string => {
   return "text-white"; // Fallback if format is unexpected
 };
 
-const Chip: React.FC<ChipProps> = ({ title, color = "gray-200" }) => {
+const Chip: React.FC<ChipProps> = ({
+  title,
+  color = "bg-gray-200",
+  icon,
+  iconColor = "bg-blue-400",
+}) => {
   // Build the background color class using the provided color
-  const bgColorClass = `bg-${color}`;
   const textColorClass = getTextColor(color);
 
   return (
     <span
-      className={`${bgColorClass} ${textColorClass} inline-block px-3 py-1 rounded-full text-sm font-semibold`}
+      className={`${color} ${textColorClass} inline-block px-3 py-1 rounded-full text-sm font-semibold relative`}
     >
-      {title}
+      {icon && (
+        <div
+          className={`absolute left-0 top-0 h-full px-2 rounded-full ${iconColor} flex items-center`}
+        >
+          {icon}
+        </div>
+      )}
+      <span className={icon ? "ml-6" : ""}>{title}</span>
     </span>
   );
 };

@@ -15,6 +15,7 @@ const quotes: QuoteProps[] = [
   },
   {
     text: "For scientific leadership give me Scott; for swift and efficient travel, Amundsen; but when you are in a hopeless situation, when there seems no way out, get down on your knees and pray for Shackleton.",
+    author: "Uncredited, will have to take the book's word for it",
   },
 ];
 
@@ -26,7 +27,7 @@ const ErnestShackletonPage = () => {
         bio={bio}
         chips={
           <>
-            <Chip title="Best boss ever" color="yellow-600" />
+            <Chip title="Best boss ever" color="bg-yellow-500" />
             <Chip title="Has Irish brogue" />
             <Chip title="Fancies self country gentleman" />
           </>

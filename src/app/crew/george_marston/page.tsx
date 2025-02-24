@@ -1,6 +1,7 @@
 import CrewMemberPage from "@/components/CrewMemberPage";
 import CrewHeader from "@/components/CrewHeader";
 import useCrewBio from "@/hooks/useCrewBio";
+import Chip from "@/components/Chip";
 
 export const metadata = {
   title: "George Marston - Artist",
@@ -11,7 +12,21 @@ const GeorgeMarstonPage = () => {
   const bio = useCrewBio("george_marston");
   return (
     <CrewMemberPage>
-      <CrewHeader bio={bio} />
+      <CrewHeader
+        bio={bio}
+        chips={
+          <>
+            <Chip title="Boyish-faced" />
+            <Chip title="Chubby" />
+            <Chip
+              title="Family man"
+              icon="👨‍👩‍👧‍👦"
+              color="bg-violet-300"
+              iconColor="bg-violet-500"
+            />
+          </>
+        }
+      />
     </CrewMemberPage>
   );
 };

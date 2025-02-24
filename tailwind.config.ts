@@ -13,6 +13,5 @@ export default {
       },
     },
   },
-  safelist: ["bg-yellow-600", "bg-gray-200", "bg-red-800"],
   plugins: [],
 } satisfies Config;
