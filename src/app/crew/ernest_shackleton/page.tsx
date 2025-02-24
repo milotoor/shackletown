@@ -3,10 +3,11 @@ import CrewHeader from "@/components/CrewHeader";
 import Chip from "@/components/Chip";
 import QuoteCarousel, { QuoteProps } from "@/components/QuoteCarousel";
 import useCrewBio from "@/hooks/useCrewBio";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Ernest Shackleton - Expedition Leader",
-  description: "Page for Ernest Shackleton, the expedition leader.",
+  description: "Commander of the most successful failure of all time.",
 };
 
 const quotes: QuoteProps[] = [
