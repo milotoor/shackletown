@@ -6,9 +6,10 @@ import _ from "lodash";
 interface CrewHeaderProps {
   bio: CrewBio;
   chips?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
-const CrewHeader: React.FC<CrewHeaderProps> = ({ bio, chips }) => {
+const CrewHeader: React.FC<CrewHeaderProps> = ({ bio, chips, children }) => {
   return (
     <div className="lg:flex lg:items-start lg:space-x-6">
       {/* Left Column: Image, Name, Role */}
@@ -30,6 +31,7 @@ const CrewHeader: React.FC<CrewHeaderProps> = ({ bio, chips }) => {
         <section>
           <div className="flex flex-wrap gap-2 mt-2">{chips}</div>
         </section>
+        <section className="mt-4">{children}</section>
       </div>
     </div>
   );
