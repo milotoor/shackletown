@@ -1,13 +1,19 @@
 import CrewMemberPage from "@/components/CrewMemberPage";
 import CrewHeader from "@/components/CrewHeader";
 import useCrewBio from "@/hooks/useCrewBio";
-import Quote from "@/components/Quote";
 import Chip, { SledgeMasterChip } from "@/components/Chip";
+import QuoteCarousel, { QuoteProps } from "@/components/QuoteCarousel";
 
 export const metadata = {
   title: "Frank Wild - Second-in-command",
   description: "Page for Frank Wild, the second-in-command.",
 };
+
+const quotes: QuoteProps[] = [
+  {
+    text: "She's going, boys. I think it's time to get off.",
+  },
+];
 
 const FrankWildPage = () => {
   const bio = useCrewBio("frank_wild");
@@ -24,7 +30,7 @@ const FrankWildPage = () => {
         }
       />
       <section className="mt-6">
-        <Quote text="She's going, boys. I think it's time to get off." />
+        <QuoteCarousel quotes={quotes} />
       </section>
     </CrewMemberPage>
   );

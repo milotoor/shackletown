@@ -4,16 +4,17 @@ import React, { useState, useEffect } from "react";
 
 export interface QuoteProps {
   text: string;
-  author?: string;
+  author?: React.ReactNode;
+  diary?: boolean;
 }
 
 /**
  * Renders an individual quote.
  */
-function Quote({ text, author }: QuoteProps) {
+function Quote({ text, author, diary }: QuoteProps) {
   return (
     <blockquote className="text-gray-800 italic p-4">
-      <p className="text-lg">{text}</p>
+      <p className={`${diary ? "font-homemadeApple" : "text-lg"}`}>{text}</p>
       {author && <footer className="mt-2 text-right">- {author}</footer>}
     </blockquote>
   );
@@ -73,19 +74,20 @@ export default function QuoteCarousel({
         ))}
       </div>
       <div className="absolute bottom-2 left-4 flex space-x-2">
-        {quotes.map((quote, index) => {
-          const isActive = index === currentIndex;
-          return (
-            <button
-              key={quote.text}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                isActive ? "bg-gray-700" : "bg-gray-300"
-              }`}
-              aria-label={`Go to quote ${index + 1}`}
-            />
-          );
-        })}
+        {quotes.length > 1 &&
+          quotes.map((quote, index) => {
+            const isActive = index === currentIndex;
+            return (
+              <button
+                key={quote.text}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                  isActive ? "bg-gray-700" : "bg-gray-300"
+                }`}
+                aria-label={`Go to quote ${index + 1}`}
+              />
+            );
+          })}
       </div>
     </div>
   );
