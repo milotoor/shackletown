@@ -6,7 +6,12 @@ import QuoteCarousel, { QuoteProps } from "@/components/QuoteCarousel";
 
 export const metadata = {
   title: "Frank Wild - Second-in-command",
-  description: "Page for Frank Wild, the second-in-command.",
+  description:
+    "The second-in-command, Wild's loyalty to Shackleton was beyond question.",
+  metadataBase: new URL("https://www.shackletown.boats"),
+  openGraph: {
+    images: [{ url: "/crew/frank_wild/img/01.webp" }],
+  },
 };
 
 const quotes: QuoteProps[] = [
