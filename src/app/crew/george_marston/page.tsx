@@ -1,7 +1,7 @@
 import CrewMemberPage from "@/components/CrewMemberPage";
 import CrewHeader from "@/components/CrewHeader";
 import useCrewBio from "@/hooks/useCrewBio";
-import Chip from "@/components/Chip";
+import Chip, { SledgeMasterChip } from "@/components/Chip";
 
 export const metadata = {
   title: "George Marston - Artist",
@@ -16,6 +16,7 @@ const GeorgeMarstonPage = () => {
         bio={bio}
         chips={
           <>
+            <SledgeMasterChip />
             <Chip title="Boyish-faced" />
             <Chip title="Chubby" />
             <Chip

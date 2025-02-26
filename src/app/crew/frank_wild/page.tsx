@@ -2,7 +2,7 @@ import CrewMemberPage from "@/components/CrewMemberPage";
 import CrewHeader from "@/components/CrewHeader";
 import useCrewBio from "@/hooks/useCrewBio";
 import Quote from "@/components/Quote";
-import Chip from "@/components/Chip";
+import Chip, { SledgeMasterChip } from "@/components/Chip";
 
 export const metadata = {
   title: "Frank Wild - Second-in-command",
@@ -17,8 +17,9 @@ const FrankWildPage = () => {
         bio={bio}
         chips={
           <>
-            <Chip title="True blue" color="bg-blue-500" />
+            <SledgeMasterChip />
             <Chip title="Unimaginative disposition" />
+            <Chip title="True blue" color="bg-blue-500" />
           </>
         }
       />

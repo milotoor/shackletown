@@ -1,7 +1,7 @@
 import CrewMemberPage from "@/components/CrewMemberPage";
 import CrewHeader from "@/components/CrewHeader";
 import useCrewBio from "@/hooks/useCrewBio";
-import Chip from "@/components/Chip";
+import Chip, { SledgeMasterChip } from "@/components/Chip";
 
 export const metadata = {
   title: "Tom Crean - Second Officer",
@@ -17,7 +17,7 @@ const TomCreanPage = () => {
         chips={
           <>
             <Chip title="Follows orders" />
-            <Chip color="bg-blue-800" title="Sledge master" icon="🐕" />
+            <SledgeMasterChip />
           </>
         }
       />

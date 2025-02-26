@@ -38,18 +38,22 @@ const Chip: React.FC<ChipProps> = ({
 
   return (
     <span
-      className={`${color} ${textColorClass} inline-block px-3 py-1 rounded-full text-sm font-semibold relative`}
+      className={`${color} ${textColorClass} inline-block flex items-center rounded-full text-sm font-semibold`}
     >
       {icon && (
         <div
-          className={`absolute left-0 top-0 h-full px-2 rounded-full ${iconColor} flex items-center`}
+          className={`h-full px-2 rounded-full ${iconColor} flex items-center`}
         >
           {icon}
         </div>
       )}
-      <span className={icon ? "ml-6" : ""}>{title}</span>
+      <span className={`${icon ? "pl-2" : ""} h-full px-3 py-1`}>{title}</span>
     </span>
   );
 };
 
 export default Chip;
+
+export function SledgeMasterChip() {
+  return <Chip title="Sledge master" color="bg-blue-800" icon="🐕" />;
+}
