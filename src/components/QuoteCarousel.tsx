@@ -14,7 +14,9 @@ export interface QuoteProps {
 function Quote({ text, author, diary }: QuoteProps) {
   return (
     <blockquote className="text-gray-800 italic p-4">
-      <p className={`${diary ? "font-homemadeApple" : "text-lg"}`}>{text}</p>
+      <p className={`${diary ? "font-cedarvilleCursive text-2xl" : "text-lg"}`}>
+        {text}
+      </p>
       {author && <footer className="mt-2 text-right">- {author}</footer>}
     </blockquote>
   );

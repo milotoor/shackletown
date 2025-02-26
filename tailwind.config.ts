@@ -13,7 +13,7 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        homemadeApple: ["Homemade Apple", ...fontFamily.serif],
+        cedarvilleCursive: ["Cedarville Cursive", ...fontFamily.serif],
       },
     },
   },
