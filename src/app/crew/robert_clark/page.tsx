@@ -15,11 +15,19 @@ const RobertClarkPage = () => {
       <CrewHeader
         bio={bio}
         chips={
-          <Chip
-            title="Adélie penguins sound like surname"
-            icon="🐧"
-            iconColor="bg-stone-700"
-          />
+          <>
+            <Chip
+              title="Adélie penguins sound like surname"
+              icon="🐧"
+              iconColor="bg-stone-700"
+            />
+            <Chip
+              title="Humorless Scot"
+              color="bg-blue-600"
+              icon="🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+              iconColor="bg-white"
+            />
+          </>
         }
       />
     </CrewMemberPage>

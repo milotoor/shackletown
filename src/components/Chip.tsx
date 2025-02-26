@@ -31,7 +31,7 @@ const Chip: React.FC<ChipProps> = ({
   title,
   color = "bg-gray-200",
   icon,
-  iconColor = "bg-blue-400",
+  iconColor,
 }) => {
   // Build the background color class using the provided color
   const textColorClass = getTextColor(color);
@@ -55,5 +55,12 @@ const Chip: React.FC<ChipProps> = ({
 export default Chip;
 
 export function SledgeMasterChip() {
-  return <Chip title="Sledge master" color="bg-blue-800" icon="🐕" />;
+  return (
+    <Chip
+      title="Sledge master"
+      color="bg-blue-800"
+      icon="🐕"
+      iconColor="bg-blue-400"
+    />
+  );
 }

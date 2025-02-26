@@ -25,6 +25,8 @@ const GeorgeMarstonPage = () => {
               color="bg-violet-300"
               iconColor="bg-violet-500"
             />
+            <Chip title="Worries outwardly" color="bg-orange-400" />
+            <Chip title="Disliked by Shackleton" color="bg-red-900" />
           </>
         }
       />

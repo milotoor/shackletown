@@ -18,6 +18,7 @@ const TomCreanPage = () => {
           <>
             <Chip title="Follows orders" />
             <SledgeMasterChip />
+            <Chip title="Tactless" />
           </>
         }
       />

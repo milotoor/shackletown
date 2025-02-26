@@ -6,8 +6,9 @@ crew:
   - name: "Frank Wild"
     internal_name: "frank_wild"
     role: "second-in-command"
-  - name: "Frank Worsley"
+  - name: 'Frank "Wuzzles" Worsley'
     internal_name: "frank_worsley"
+    full_name: "Frank Worsley"
     role: "captain and navigator"
   - name: "Lionel Greenstreet"
     internal_name: "lionel_greenstreet"
@@ -19,8 +20,9 @@ crew:
   - name: "Alfred Cheetham"
     internal_name: "alfred_cheetham"
     role: "third officer"
-  - name: "Hubert Hudson"
+  - name: 'Hubert "Buddha" Hudson'
     internal_name: "hubert_hudson"
+    full_name: "Hubert Hudson"
     role: "navigator"
   - name: "Lewis Rickinson"
     internal_name: "lewis_rickinson"
@@ -63,7 +65,7 @@ crew:
     internal_name: "harry_mcnish"
     full_name: "Harry McNish"
     role: "carpenter"
-  - name: "Charles Green"
+  - name: 'Charles "Doughballs" Green'
     internal_name: "charles_green"
     full_name: "Charles Green"
     role: "cook"

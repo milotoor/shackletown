@@ -14,7 +14,12 @@ const HubertHudsonPage = () => {
     <CrewMemberPage>
       <CrewHeader
         bio={bio}
-        chips={<Chip title="Killed these poor birds" color="bg-red-800" />}
+        chips={
+          <>
+            <Chip title="Killed these poor birds" color="bg-red-800" />
+            <Chip title="Sole attendee of costume party" />
+          </>
+        }
       />
     </CrewMemberPage>
   );

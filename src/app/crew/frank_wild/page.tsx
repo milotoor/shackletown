@@ -26,6 +26,18 @@ const FrankWildPage = () => {
             <SledgeMasterChip />
             <Chip title="Unimaginative disposition" />
             <Chip title="True blue" color="bg-blue-500" />
+            <Chip
+              title="Executes seals"
+              color="bg-red-700"
+              icon="🦭"
+              iconColor="bg-pink-950"
+            />
+            <Chip
+              title="Ordered 5000 sewing needles"
+              icon="🪡"
+              color="bg-orange-600"
+              iconColor="bg-amber-800"
+            />
           </>
         }
       />

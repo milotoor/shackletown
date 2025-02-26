@@ -27,6 +27,12 @@ const FrankWorsleyPage = () => {
           <>
             <Chip title="Resting mischief face" />
             <Chip title="Undisciplined" color="bg-amber-950" />
+            <Chip
+              title="Spots seals 3.5 miles away"
+              color="bg-teal-600"
+              icon="🦭"
+              iconColor="bg-sky-300"
+            />
           </>
         }
       />
