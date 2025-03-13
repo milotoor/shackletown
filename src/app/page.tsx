@@ -28,8 +28,8 @@ export default function Home() {
       </section>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto py-12 px-4 md:px-8">
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+      <main className="flex flex-col gap-8 max-w-4xl mx-auto py-12 px-4 md:px-8">
+        <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-slate-100">
               The Story
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
 
         {/* Crew Section */}
-        <div className="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg shadow-md mb-8">
+        <div className="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg shadow-md">
           <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-slate-100">
             The Crew
           </h2>
@@ -101,6 +101,23 @@ export default function Home() {
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             View Kodiaktographs
+          </Link>
+        </div>
+
+        {/* Timeline Section */}
+        <div className="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg shadow-md">
+          <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-slate-100">
+            Timeline
+          </h2>
+          <p className="text-slate-700 dark:text-slate-300 mb-6">
+            Follow the expedition&apos;s journey from the departure of the{" "}
+            <em>Endurance</em> to the final events of the saga.
+          </p>
+          <Link
+            href="/timeline"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+          >
+            View Timeline
           </Link>
         </div>
       </main>
