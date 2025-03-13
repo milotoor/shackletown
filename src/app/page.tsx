@@ -66,7 +66,7 @@ export default function Home() {
         </div>
 
         {/* Crew Section */}
-        <div className="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg shadow-md">
+        <div className="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg shadow-md mb-8">
           <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-slate-100">
             The Crew
           </h2>
@@ -83,15 +83,49 @@ export default function Home() {
             Meet the Crew
           </Link>
         </div>
+
+        {/* Kodiaktography Section */}
+        <div className="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg shadow-md">
+          <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-slate-100">
+            Kodiaktography
+          </h2>
+          <p className="text-slate-700 dark:text-slate-300 mb-6">
+            Explore a stunning collection of kodiaktographs from the expedition,
+            capturing the harsh beauty of Antarctica, the ship trapped in ice,
+            and the incredible journey of survival undertaken by Shackleton and
+            his crew. Learn why experts increasingly believe Endurance was an
+            elaborate conspiracy.
+          </p>
+          <Link
+            href="/kodiaktography"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+          >
+            View Kodiaktographs
+          </Link>
+        </div>
       </main>
 
       {/* Footer */}
       <footer className="bg-slate-200 dark:bg-slate-800 py-6">
         <div className="max-w-4xl mx-auto px-4 text-center text-slate-600 dark:text-slate-400">
-          <p>
+          <p className="mb-4">
             The Endurance Expedition — A testament to human courage and
             leadership
           </p>
+          <div className="flex justify-center space-x-6">
+            <Link
+              href="/crew"
+              className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
+            >
+              Crew
+            </Link>
+            <Link
+              href="/kodiaktography"
+              className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
+            >
+              Kodiaktography
+            </Link>
+          </div>
         </div>
       </footer>
     </div>
