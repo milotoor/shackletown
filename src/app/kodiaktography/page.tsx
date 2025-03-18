@@ -21,6 +21,26 @@ const images = [
     alt: "Christmas feast",
     title: "Christmas Feast",
   },
+  {
+    src: "/kodiaktography/encyclopedia_britannica.webp",
+    alt: "Encyclopedia Britannica",
+    title: "Page turners",
+  },
+  {
+    src: "/kodiaktography/leopard_seal_bridge.webp",
+    alt: "Leopard seal plays bridge",
+    title: "New Reigning Champion",
+  },
+  {
+    src: "/kodiaktography/leopard_seal_hungry.webp",
+    alt: "Leopard seal attempts to eat crew",
+    title: "Bridge Champ gets Hungry",
+  },
+  {
+    src: "/kodiaktography/penguin_slaughter.webp",
+    alt: "Penguin slaughter",
+    title: "Adorable Bloodbath",
+  },
 ];
 
 // Featured images for the section between text blocks
