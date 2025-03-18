@@ -98,3 +98,6 @@ crew:
   - name: "Perce Blackborow"
     internal_name: "perce_blackborow"
     role: "stowaway"
+  - name: "Dogs"
+    internal_name: "dogs"
+    role: "Sacrificial muscle / food"

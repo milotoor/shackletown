@@ -34,6 +34,7 @@ const crewImagePositions: Partial<Record<InternalName, string>> = {
   john_vincent: "object-[center_20%]",
   ernest_holness: "object-[center_15%]",
   perce_blackborow: "object-[center_10%]",
+  dogs: "object-bottom",
 };
 
 export default function CrewCard({

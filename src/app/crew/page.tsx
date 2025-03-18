@@ -193,6 +193,20 @@ export default function CrewList() {
             ))}
           </div>
         </section>
+
+        {/* Seamen Section */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-slate-800 dark:text-slate-100 border-b border-slate-200 dark:border-slate-700 pb-2">
+            Nonhuman Beasts
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <CrewCard
+              name="Dogs"
+              internalName="dogs"
+              role="Sacrificial muscle / food"
+            />
+          </div>
+        </section>
       </main>
     </div>
   );

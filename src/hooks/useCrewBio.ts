@@ -28,7 +28,8 @@ export type InternalName =
   | "john_vincent"
   | "ernest_holness"
   | "william_stephenson"
-  | "perce_blackborow";
+  | "perce_blackborow"
+  | "dogs";
 
 export interface CrewBio {
   name: string;
