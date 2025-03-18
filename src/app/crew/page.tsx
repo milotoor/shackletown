@@ -205,6 +205,11 @@ export default function CrewList() {
               internalName="dogs"
               role="Sacrificial muscle / food"
             />
+            <CrewCard
+              name="Mrs. Chippy"
+              internalName="mrs_chippy"
+              role="Ship's cat"
+            />
           </div>
         </section>
       </main>
