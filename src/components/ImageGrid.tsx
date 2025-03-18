@@ -1,13 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
-
-interface ImageItem {
-  src: string;
-  alt: string;
-  title: string;
-}
+import { useImageContext, ImageItem } from "../context/ImageContext";
 
 interface ImageGridProps {
   images: ImageItem[];
@@ -18,26 +13,19 @@ export default function ImageGrid({
   images,
   noShadow = false,
 }: ImageGridProps) {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  // Use the global image context instead of local state
+  const { registerImages, unregisterImages, setSelectedImage } =
+    useImageContext();
 
-  // Add event listener for the Escape key
+  // Register images when component mounts
   useEffect(() => {
-    const handleEscapeKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && selectedImage) {
-        setSelectedImage(null);
-      }
-    };
+    registerImages(images);
 
-    // Add event listener when a image is selected
-    if (selectedImage) {
-      document.addEventListener("keydown", handleEscapeKey);
-    }
-
-    // Clean up the event listener when component unmounts or selectedImage changes
+    // Unregister images when component unmounts
     return () => {
-      document.removeEventListener("keydown", handleEscapeKey);
+      unregisterImages(images);
     };
-  }, [selectedImage]);
+  }, [images, registerImages, unregisterImages]);
 
   return (
     <>
@@ -67,45 +55,6 @@ export default function ImageGrid({
           </div>
         ))}
       </div>
-
-      {/* Lightbox */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative max-w-5xl max-h-[90vh] w-full h-full">
-            <Image
-              src={selectedImage}
-              alt="Selected image"
-              fill
-              className="object-contain"
-            />
-            <button
-              className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 rounded-full p-2 text-white transition-colors"
-              onClick={(e) => {
-                e.stopPropagation();
-                setSelectedImage(null);
-              }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      )}
     </>
   );
 }
