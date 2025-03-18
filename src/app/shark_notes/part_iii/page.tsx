@@ -3,7 +3,8 @@ import NotesLayout from "@/components/NotesLayout";
 import Tabs, { Tab } from "@/components/Tabs";
 import NoteCard from "@/components/NoteCard";
 import CrewLink from "@/components/CrewLink";
-import TextImage from "@/components/TextImage";
+import TwoColumns from "@/components/TwoColumns";
+import ClickableImage from "@/components/ClickableImage";
 import { ImageProvider } from "@/context/ImageContext";
 import ImageGrid from "@/components/ImageGrid";
 import QuoteCarousel from "@/components/QuoteCarousel";
@@ -90,21 +91,29 @@ export default function PartIII() {
             </NoteCard>
 
             <NoteCard title="Fauna encounters">
-              <TextImage
-                imageSrc="/kodiaktography/leopard_seal_bridge.webp"
-                imageAlt="Sea leopard image"
-                imageTitle="Sea leopard looking for a bridge partner"
+              <TwoColumns
+                image={
+                  <ClickableImage
+                    src="/kodiaktography/leopard_seal_bridge.webp"
+                    alt="Sea leopard image"
+                    title="Sea leopard looking for a bridge partner"
+                  />
+                }
               >
                 Returning from a hunting trip,{" "}
                 <CrewLink name="thomas_orde_lees" /> becomes chums with a sea
                 leopard. He invites it to play bridge.
-              </TextImage>
+              </TwoColumns>
 
               <div className="mt-4">
-                <TextImage
-                  imageSrc="/kodiaktography/leopard_seal_hungry.webp"
-                  imageAlt="Leopard seal hungry"
-                  imageTitle="Leopard seal hungry"
+                <TwoColumns
+                  image={
+                    <ClickableImage
+                      src="/kodiaktography/leopard_seal_hungry.webp"
+                      alt="Leopard seal hungry"
+                      title="Leopard seal hungry"
+                    />
+                  }
                 >
                   After losing a game, the leopard seal gets ferociously hungry
                   and attempts to eat everyone. Quoth{" "}
@@ -114,15 +123,19 @@ export default function PartIII() {
                   undulating motion at least five miles an hour. They attack
                   without provocation, looking on man as a penguin or
                   seal.&quot;
-                </TextImage>
+                </TwoColumns>
               </div>
             </NoteCard>
 
             <NoteCard title="The Crew notices they are running out of food">
-              <TextImage
-                imageSrc="/kodiaktography/food_stores_low.webp"
-                imageAlt="Food stores low"
-                imageTitle="Food stores low"
+              <TwoColumns
+                image={
+                  <ClickableImage
+                    src="/kodiaktography/food_stores_low.webp"
+                    alt="Food stores low"
+                    title="Food stores low"
+                  />
+                }
               >
                 <p>
                   "That's weird," says <CrewLink name="charles_green" />, "I'm
@@ -134,7 +147,7 @@ export default function PartIII() {
                   <CrewLink name="ernest_shackleton" />. The Boss says "No, let
                   them rot and we shall starve." Nobody argues.
                 </p>
-              </TextImage>
+              </TwoColumns>
             </NoteCard>
 
             <NoteCard title="Patience Camp">
@@ -185,16 +198,20 @@ export default function PartIII() {
 
           <Tab title="2">
             <NoteCard title="More dog murders">
-              <TextImage
-                imageSrc="/kodiaktography/dogs_with_worms.webp"
-                imageAlt="Dog murder"
-                imageTitle="Dog murder"
+              <TwoColumns
+                image={
+                  <ClickableImage
+                    src="/kodiaktography/dogs_with_worms.webp"
+                    alt="Dog murder"
+                    title="Dog murder"
+                  />
+                }
               >
                 <p>
                   Those belonging to <CrewLink name="frank_hurley" />
                   's team are executed.
                 </p>
-              </TextImage>
+              </TwoColumns>
             </NoteCard>
 
             <NoteCard title="Optimism sails on the wind">
@@ -219,10 +236,14 @@ export default function PartIII() {
             </NoteCard>
 
             <NoteCard title="Teams are sent back to Ocean Camp">
-              <TextImage
-                imageSrc="/kodiaktography/encyclopedia_britannica.webp"
-                imageAlt="Encyclopedia Britannica"
-                imageTitle="Encyclopedia Britannica"
+              <TwoColumns
+                image={
+                  <ClickableImage
+                    src="/kodiaktography/encyclopedia_britannica.webp"
+                    alt="Encyclopedia Britannica"
+                    title="Encyclopedia Britannica"
+                  />
+                }
               >
                 <p>
                   The dog teams of <CrewLink name="alexander_macklin" /> and{" "}
@@ -241,18 +262,22 @@ export default function PartIII() {
                 <p>
                   Later they retrieve the <i>Stancomb Wills</i> as well.
                 </p>
-              </TextImage>
+              </TwoColumns>
             </NoteCard>
 
             <NoteCard title="All meat diet induces squeaky gut">
-              <TextImage
-                imageSrc="/kodiaktography/no_more_tp.webp"
-                imageAlt="No more TP"
-                imageTitle="No more TP"
+              <TwoColumns
+                image={
+                  <ClickableImage
+                    src="/kodiaktography/no_more_tp.webp"
+                    alt="No more TP"
+                    title="No more TP"
+                  />
+                }
               >
                 No laughing matter. The men are constipated and have not had
                 access to TP since the Endurance. They wipe with ice.
-              </TextImage>
+              </TwoColumns>
             </NoteCard>
 
             <NoteCard title="Monotony reigns supreme">
