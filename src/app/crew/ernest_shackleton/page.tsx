@@ -38,9 +38,15 @@ const ErnestShackletonPage = () => {
           </>
         }
       >
-        <div className="bg-gray-100 text-gray-800 p-2 rounded-md">
-          <p className="text-xl font-bold">Get rich quick schemes:</p>
-          <ul className="list-disc list-inside pl-4">
+        <h3 className="text-xl font-bold mb-3 text-slate-800 dark:text-slate-100">
+          Get rich quick schemes
+        </h3>
+        <div className="rounded-md text-slate-700 dark:text-slate-300">
+          <p className="mb-2">
+            Despite his incredible leadership abilities, Shackleton had numerous
+            failed business ventures:
+          </p>
+          <ul className="list-disc list-inside pl-4 space-y-1">
             <li>Cigarette manufacturing</li>
             <li>Taxicab fleet</li>
             <li>Mining in Bulgaria</li>

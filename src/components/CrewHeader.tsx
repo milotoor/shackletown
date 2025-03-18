@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { CrewBio } from "@/hooks/useCrewBio";
-import _ from "lodash";
 
 interface CrewHeaderProps {
   bio: CrewBio;
