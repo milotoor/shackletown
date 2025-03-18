@@ -2,6 +2,7 @@ import CrewMemberPage from "@/components/CrewMemberPage";
 import CrewHeader from "@/components/CrewHeader";
 import useCrewBio from "@/hooks/useCrewBio";
 import QuoteCarousel, { QuoteProps } from "@/components/QuoteCarousel";
+import Chip from "@/components/Chip";
 
 export const metadata = {
   title: "Lionel Greenstreet - First Officer",
@@ -25,7 +26,10 @@ const LionelGreenstreetPage = () => {
   const bio = useCrewBio("lionel_greenstreet");
   return (
     <CrewMemberPage>
-      <CrewHeader bio={bio} />
+      <CrewHeader
+        bio={bio}
+        chips={<Chip title="Literally cries over spilt milk" />}
+      />
       <section className="mt-6">
         <QuoteCarousel quotes={quotes} />
       </section>

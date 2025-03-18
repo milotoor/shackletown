@@ -4,13 +4,12 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import { useImageContext, ImageItem } from "@/context/ImageContext";
 
-type ClickableImageProps = ImageItem & {
+type ClickableImageProps = Omit<ImageItem, "alt"> & {
   imageHeight?: string;
 };
 
 const ClickableImage: React.FC<ClickableImageProps> = ({
   src,
-  alt,
   title,
   imageHeight = "h-48",
 }) => {
@@ -22,8 +21,8 @@ const ClickableImage: React.FC<ClickableImageProps> = ({
     // Create an ImageItem from the props
     const imageItem: ImageItem = {
       src,
-      alt,
-      title: title || alt,
+      alt: title,
+      title: title,
     };
 
     registerImages([imageItem]);
@@ -32,14 +31,14 @@ const ClickableImage: React.FC<ClickableImageProps> = ({
     return () => {
       unregisterImages([imageItem]);
     };
-  }, [src, alt, title, registerImages, unregisterImages]);
+  }, [src, title, registerImages, unregisterImages]);
 
   return (
     <div
       className={`relative ${imageHeight} w-full rounded-md overflow-hidden cursor-pointer hover:opacity-90 transition-opacity`}
       onClick={() => setSelectedImage(src)}
     >
-      <Image src={src} alt={alt} fill className="object-cover" />
+      <Image src={src} alt={title} fill className="object-cover" />
     </div>
   );
 };
