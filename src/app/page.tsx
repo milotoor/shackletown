@@ -120,6 +120,22 @@ export default function Home() {
             View Timeline
           </Link>
         </div>
+
+        {/* Shark Notes Section */}
+        <div className="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg shadow-md">
+          <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-slate-100">
+            Shark Notes
+          </h2>
+          <p className="text-slate-700 dark:text-slate-300 mb-6">
+            Brief notes of the book chapters, with included kodiaktographs.
+          </p>
+          <Link
+            href="/shark_notes"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+          >
+            View Shark Notes
+          </Link>
+        </div>
       </main>
 
       {/* Footer */}
