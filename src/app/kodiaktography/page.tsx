@@ -24,7 +24,7 @@ const images = [
   {
     src: "/kodiaktography/encyclopedia_britannica.webp",
     alt: "Encyclopedia Britannica",
-    title: "Page turners",
+    title: "Page Turners",
   },
   {
     src: "/kodiaktography/leopard_seal_bridge.webp",
@@ -37,9 +37,19 @@ const images = [
     title: "Bridge Champ gets Hungry",
   },
   {
+    src: "/kodiaktography/penguin_rookery.webp",
+    alt: "Penguin rookery",
+    title: "Adélie Advent",
+  },
+  {
     src: "/kodiaktography/penguin_slaughter.webp",
     alt: "Penguin slaughter",
     title: "Adorable Bloodbath",
+  },
+  {
+    src: "/kodiaktography/bubble_bath.webp",
+    alt: "Bubble bath",
+    title: "Bubble Bath",
   },
 ];
 
