@@ -1,6 +1,7 @@
 import CrewMemberPage from "@/components/CrewMemberPage";
 import CrewHeader from "@/components/CrewHeader";
 import useCrewBio from "@/hooks/useCrewBio";
+import QuoteCarousel, { QuoteProps } from "@/components/QuoteCarousel";
 import Chip from "@/components/Chip";
 import Image from "next/image";
 import ImageGrid from "@/components/ImageGrid";
@@ -9,6 +10,14 @@ export const metadata = {
   title: "Dogs",
   description: "The sacrificial muscle of the ship",
 };
+
+const quotes: QuoteProps[] = [
+  {
+    text: "[Grus] is a fine little dog, hardworking and of a good disposition. Also I have had him, fed him and trained him since he was born. I remember taking him out when he was a puppy in my pocket, only his nose peeping out and getting covered with frost. I used to take him on the sledge when I was driving the team, and in those early days he used to take an active interest in the doings of the dogs.",
+    author: "Alexander Macklin",
+    diary: true,
+  },
+];
 
 const kodiaktography = [
   {
@@ -62,6 +71,10 @@ const DogsPage = () => {
           </div>
         </div>
       </CrewHeader>
+
+      <div className="mt-10">
+        <QuoteCarousel quotes={quotes} />
+      </div>
 
       <div className="mt-10">
         <ImageGrid images={kodiaktography} />

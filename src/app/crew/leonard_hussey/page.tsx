@@ -14,7 +14,13 @@ const LeonardHusseyPage = () => {
     <CrewMemberPage>
       <CrewHeader
         bio={bio}
-        chips={<Chip title="Unfailing good humor" color="bg-amber-200" />}
+        chips={
+          <>
+            <Chip title="Unfailing good humor" color="bg-amber-200" />
+            <Chip title="Plays zither banjo" color="bg-rose-200" icon="🪕" />
+            <Chip title="Knows 6 tunes on banjo" color="bg-red-800" />
+          </>
+        }
       />
     </CrewMemberPage>
   );

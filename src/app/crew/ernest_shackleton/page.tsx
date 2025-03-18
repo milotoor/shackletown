@@ -22,6 +22,15 @@ const quotes: QuoteProps[] = [
     text: "For scientific leadership give me Scott; for swift and efficient travel, Amundsen; but when you are in a hopeless situation, when there seems no way out, get down on your knees and pray for Shackleton.",
     author: "Uncredited, will have to take the book's word for it",
   },
+  {
+    text: "I am rather tired. I suppose it is the strain. I long for some rest, free from thought.",
+    diary: true,
+  },
+  {
+    text: "Waiting. Waiting. Waiting.",
+    diary: true,
+    author: "Diary entry, 26 January 1916",
+  },
 ];
 
 const ErnestShackletonPage = () => {
