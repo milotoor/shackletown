@@ -9,7 +9,6 @@ import { ImageProvider } from "@/context/ImageContext";
 import ImageGrid from "@/components/ImageGrid";
 import QuoteCarousel from "@/components/QuoteCarousel";
 import Link from "next/link";
-import Image from "next/image";
 
 export const metadata = {
   title: "Part III - Shark Notes",

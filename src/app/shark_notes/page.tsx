@@ -19,6 +19,7 @@ export default function SharkNotesPage() {
         "The crew sails for Antarctic landfall",
         "The Endurance is trapped in ice",
       ],
+      disabled: true,
     },
     {
       id: "part_ii",
@@ -29,16 +30,24 @@ export default function SharkNotesPage() {
         "Some other stuff?",
         "The Endurance is crushed by the ice, sinks to the abyss",
       ],
+      disabled: true,
     },
     {
       id: "part_iii",
       title: "Part III",
-      highlights: ["Crew establishes Mark Time Camp"],
+      highlights: [
+        "Crew establishes Mark Time Camp",
+        "Sea leopard encounters",
+        "Famine",
+        "Patience Camp is a virtue",
+        "A farewell to dogs",
+        "The boats are launched",
+      ],
     },
-    { id: "part_iv", title: "Part IV", highlights: [] },
-    { id: "part_v", title: "Part V", highlights: [] },
-    { id: "part_vi", title: "Part VI", highlights: [] },
-    { id: "part_vii", title: "Part VII", highlights: [] },
+    { id: "part_iv", title: "Part IV", highlights: [], disabled: true },
+    { id: "part_v", title: "Part V", highlights: [], disabled: true },
+    { id: "part_vi", title: "Part VI", highlights: [], disabled: true },
+    { id: "part_vii", title: "Part VII", highlights: [], disabled: true },
   ];
 
   return (
@@ -104,12 +113,18 @@ export default function SharkNotesPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href={`/shark_notes/${part.id}`}
-                  className="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
-                >
-                  View Notes
-                </Link>
+                {part.disabled ? (
+                  <span className="mt-4 inline-block bg-blue-600 opacity-50 cursor-not-allowed text-white font-bold py-2 px-4 rounded-lg">
+                    View Notes
+                  </span>
+                ) : (
+                  <Link
+                    href={`/shark_notes/${part.id}`}
+                    className="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
+                  >
+                    View Notes
+                  </Link>
+                )}
               </div>
             ))}
           </div>
